@@ -1,0 +1,249 @@
+/* ==========================================================================
+   1. ΦΟΝΤ (FONTS)
+   ========================================================================== */
+@font-face {
+  font-family: Code_Pro_black;
+  src: url(code_pro_black.otf);
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(Raleway-Italic-VariableFont_wght.ttf);
+}
+
+/* ==========================================================================
+   2. ΓΕΝΙΚΟ HIGHLIGHT & LAYOUT (BODY)
+   ========================================================================== */
+body {
+  background-image: url('backround.png');
+  background-size: cover;
+  font-family: Code_Pro_black;
+  font-style: italic;
+  color: aliceblue;
+  margin: 0;
+  
+  /* Ενεργοποίηση Flexbox για να σπρώξουμε το footer κάτω */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+/* ==========================================================================
+   3. HEADER (ΜΠΑΡΑ ΠΛΟΗΓΗΣΗΣ)
+   ========================================================================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.224);
+  background-image: url(media/aero.png);
+  background-position: center;
+  box-shadow: 0 0px 30px rgb(0, 0, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  user-select: none;
+  z-index: 100;
+  box-sizing: border-box; /* Κρατάει το padding μέσα στο 100% του πλάτους */
+}
+
+/* ==========================================================================
+   4. ΚΕΝΤΡΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ (CONTAINER & ABOUT ME)
+   ========================================================================== */
+.container {
+  text-align: center;
+  margin-top: 300px;
+}
+
+.aboutme {
+  font-family: Raleway;
+}
+
+/* ==========================================================================
+   5. ΚΟΥΜΠΙ DISCORD (ΜΕΣΑ ΣΤΟ HEADER)
+   ========================================================================== */
+.discordbutton {
+  /* Ημιδιαφανές background για να φαίνεται το εφέ blur */
+  --bg: rgba(0, 0, 0, 0.4); 
+  --hover-bg: rgba(128, 0, 128, 0.6); 
+  --hover-text: #fff; 
+  
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.6em 1.5em;
+  background: var(--bg);
+  transition: 0.2s;
+  
+  /* Εφέ γυαλιού / Blur */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  
+  /* Σπρώχνει το κουμπί τέρμα δεξιά μέσα στο header */
+  margin-left: auto; 
+}
+
+.discordbutton:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem rgb(0, 0, 0);
+}
+
+.discordbutton:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   6. FOOTER (ΚΑΤΩ ΜΕΡΟΣ ΣΕΛΙΔΑΣ)
+   ========================================================================== */
+.footer {
+  font-family: Raleway;
+  text-align: center;
+  margin-top: auto; /* Σπρώχνει το footer τέρμα κάτω */
+  padding-bottom: 20px;
+}
+
+/* ==========================================================================
+   7. ANIMATIONS (FADE IN)
+   ========================================================================== */
+.fade-in-image {
+  animation: fadeIn 7s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+.nav-link {
+  color: aliceblue;
+  text-decoration: none; /* Αφαιρεί την υπογράμμιση */
+  font-family: Raleway;
+  margin-right: 20px; /* Δίνει απόσταση από το κουμπί του Discord */
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: purple; /* Αλλάζει χρώμα όταν περνάει το ποντίκι */
+} 
+
+
+
+
+.edu1{
+  font-family: Raleway;
+}
+
+.edu2{
+  font-family: Raleway;
+}
+
+
+
+
+.nav-link{
+  /* Ημιδιαφανές background για να φαίνεται το εφέ blur */
+  --bg: rgba(0, 0, 0, 0.4); 
+  --hover-bg: rgba(128, 0, 128, 0.6); 
+  --hover-text: #fff; 
+  
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.6em 1.5em;
+  background: var(--bg);
+  transition: 0.2s;
+  
+  /* Εφέ γυαλιού / Blur */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  
+  /* Σπρώχνει το κουμπί τέρμα δεξιά μέσα στο header */
+  margin-left: 10px; 
+}
+
+.nav-link:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem rgb(0, 0, 0);
+}
+
+.nav-link:active {
+  transform: translate(0);
+  box-shadow: none;}
+
+
+/* Το αρχικό στυλ του ονόματος στο header */
+.header-logo {
+  color: aliceblue;
+  font-family: Code_Pro_black;
+  font-size: 1.5rem; /* Ρύθμισε το μέγεθος όπως σε βολεύει */
+  cursor: pointer;
+  transition: text-shadow 0.3s ease, color 0.3s ease; /* Κάνει το εφέ να μπαίνει απαλά */
+}
+
+/* Το εφέ λάμψης όταν το ποντίκι πάει από πάνω (Hover) */
+.header-logo:hover {
+  color: #fff; /* Γίνεται καθαρό λευκό για να ξεχωρίζει */
+  
+  /* Εδώ γίνεται η μαγεία του Glow */
+  text-shadow: 0 0 5px #fff, 
+               0 0 10px #a855f7, 
+               0 0 20px #a855f7, 
+               0 0 40px #a855f7;
+}
+
+
+
+
+
+/* Ο κεντρικός τίτλος */
+.main-title {
+  font-family: Code_Pro_black;
+  color: #fff;
+  font-size: 4rem; /* Ή όσο μεγάλο το έχεις ήδη */
+  text-align: center;
+  
+  /* Ενεργοποίηση του animation */
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+/* Η συνταγή του εφέ (Pulse + Glow) */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 20px rgba(168, 85, 247, 0.5);
+  }
+  
+  50% {
+    transform: scale(1.05); /* Μεγαλώνει ελαφρώς στο 50% του χρόνου */
+    text-shadow: 0 0 15px #fff, 
+                 0 0 30px #a855f7, 
+                 0 0 50px #a855f7; /* Δυναμώνει η λάμψη */
+  }
+  
+  100% {
+    transform: scale(1); /* Επιστρέφει στο αρχικό μέγεθος */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 20px rgba(168, 85, 247, 0.5);
+  }
+}
