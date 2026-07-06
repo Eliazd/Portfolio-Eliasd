@@ -3,20 +3,36 @@
    ========================================================================== */
 @font-face {
   font-family: Code_Pro_black;
-  src: url(code_pro_black.otf);
+  src: url(assets/code_pro_black.otf);
 }
 
 @font-face {
   font-family: Raleway;
-  src: url(Raleway-Italic-VariableFont_wght.ttf);
+  src: url(assets/Raleway-Italic-VariableFont_wght.ttf);
 }
 
 /* ==========================================================================
    2. ΓΕΝΙΚΟ HIGHLIGHT & LAYOUT (BODY)
    ========================================================================== */
 body {
-  background-image: url('backround.png');
+  background-image: url('assets/backround.png');
+  
+  /* 1. Αναγκάζει το φόντο να καλύπτει όλη την οθόνη χωρίς να παραμορφώνεται */
   background-size: cover;
+  
+  /* 2. Κεντράρει την εικόνα για να φαίνονται σωστά οι μωβ γραμμές */
+  background-position: center;
+  
+  /* 3. Απαγορεύει στην εικόνα να επαναλαμβάνεται σαν πλακάκι */
+  background-repeat: no-repeat;
+  
+  /* 4. Κλειδώνει το φόντο στη θέση του! Η σελίδα θα ρολάρει από πάνω, 
+        αλλά το φόντο θα μένει σταθερό (Parallax effect) */
+  background-attachment: fixed;
+  
+  /* 5. Βάζει ένα μαύρο/σκοτεινό χρώμα από πίσω, ώστε αν για κάποιο λόγο 
+        αργήσει να φορτώσει η εικόνα, να μην φανεί άσπρο background */
+  background-color: #0d0d13;
   font-family: Code_Pro_black;
   font-style: italic;
   color: aliceblue;
@@ -146,7 +162,7 @@ header {
 
 
 .edu1{
-  font-family: Raleway;
+  font-family: Code_pro_black;
 }
 
 .edu2{
@@ -251,10 +267,12 @@ header {
 
 
 
-
-
-
-
+.project-card {
+  background: rgba(255, 255, 255, 0.05); /* Πολύ χαμηλό opacity */
+  backdrop-filter: blur(10px); /* Θολώνει το φόντο από πίσω */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Λεπτό περίγραμμα */
+  border-radius: 16px;
+}
 
 
 
@@ -294,4 +312,116 @@ header {
     padding: 0.5em 1em; /* Πιο μικρό κουμπί για να χωράει */
     font-size: 0.85rem;
   }
+}
+
+
+/* Το γενικό κουτί που κρατάει όλες τις κάρτες */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Αν δεν χωράνε, πηγαίνουν από κάτω */
+  gap: 20px; /* Απόσταση μεταξύ των καρτών */
+  justify-content: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+/* Η κάθε κάρτα ξεχωριστά */
+.card {
+  background: rgba(255, 255, 255, 0.03); /* Ημιδιαφανές φόντο */
+  backdrop-filter: blur(12px); /* Εφέ θολώματος γυαλιού */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Λεπτό περίγραμμα */
+  border-radius: 16px; /* Στρογγυλεμένες γωνίες */
+  padding: 25px;
+  width: 300px; /* Σταθερό πλάτος για κάθε κάρτα */
+  color: aliceblue;
+  font-family: Raleway, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Τίτλος και κείμενο μέσα στην κάρτα */
+.card h3 {
+  font-family: Code_Pro_black, sans-serif;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.8; /* Ελαφρώς πιο σβηστό κείμενο για να ξεχωρίζει ο τίτλος */
+  margin-bottom: 20px;
+}
+
+/* Εφέ όταν περνάει το ποντίκι πάνω από την κάρτα (Hover) */
+.card:hover {
+  transform: translateY(-5px); /* Η κάρτα σηκώνεται ελαφρώς προς τα πάνω */
+  border-color: #a855f7; /* Το περίγραμμα γίνεται μωβ */
+  box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2); /* Αποκτά μια μωβ αύρα/σκιά */
+}
+
+/* Το κουμπί μέσα στην κάρτα */
+.card-btn {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid #a855f7;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.card-btn:hover {
+  background: #a855f7; /* Γεμίζει το κουμπί με χρώμα στο hover */
+}
+
+
+.card-btn1 {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.575);
+  border: 1px solid #a855f7;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+
+
+
+.sound-button {
+    padding: 0.7rem 1.4rem;
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1.0);
+    font-family: 'Raleway';
+    font-size: 1.0rem;
+    cursor: pointer;
+}
+
+.music-control {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #a855f7;
+    overflow: hidden;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+}
+
+.volume-slider {
+    width: 0;
+    opacity: 0;
+    transition: width 0.4s ease, opacity 0.3s ease;
+}
+
+.volume-slider.visible {
+    width: 80px;
+    opacity: 1;
 }
