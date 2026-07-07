@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliasd</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header >
+        <span class="header-logo">Eliasd</span>
+        <button id= "discordbutton"class="discordbutton">Discord</button>
+        <a href="#education" class="nav-link">Education</a>
+
+        <div class="music-control">
+                <button class="sound-button" id="sound-button">Play Music</button>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.05" value="1">
+            </div>
+        
+    </header>
+
+
+     <audio id="music" src="/assets/song.mp3" loop></audio>
+
+    <div class="fade-in-image">
+        <div class ="container">
+        <center><h1 class="main-title   ">Eliasd</h1> 
+        <p class="welcome-text" id="welcome-text">Developing the future</p>
+
+
+        <pre class="aboutme">Hi, I'm Eliasd 👋
+
+
+I am a Web Developer passionate about creating beautiful, functional, and modern websites. I love combining clean code with smart design to turn creative ideas into fully functional digital experiences.
+Currently, I am focusing on Front-end Development (HTML, CSS, JavaScript)
+ and constantly looking for new challenges and technologies to level up my skills. When I'm not coding, you can usually find me exploring the latest tech trends or enjoying Minecraft.
+My goal is to build the future of the web, one line of code at a time!</pre>
+
+</center>
+        </div>
+    </div>
+<center>
+<div id="education" class="education-section">
+    <h2 class="edu1">My Education & Journey</h2>
+    <pre class="edu2">Since the age of 10 i started online lessons with Mindlab Education.
+    First of all i started with Scratch learning basic logic.
+        Since then i continue these online courses leaerning Python and Web Development</pre>
+</div>
+</center>
+<div id="particles-js"></div>
+<div class="cards-container">
+  
+  <div class="card">
+    <h3>Memory Game</h3>
+    <p>A fun memory game for a competition with Mindlab Education</p>
+    <a href="https://trinket.io/embed/python/6e06c7674cb4?outputOnly=true" target="_blank" class="card-btn">View Project</a>
+  </div>
+
+  <div class="card">
+    <h3>Smart discord bot</h3>
+    <p>An AI discord bot with python combined with ollama</p>
+    <a href="#" class="card-btn1">Not available</a>
+  </div>
+
+</div>
+
+
+
+
+<div id="creeper-egg" class="creeper">
+    <img src="assets/creeper.png" alt="Creeper">
+</div>
+
+<audio id="sound-hit" src="assets/damage.mp3"></audio>
+<audio id="sound-boom" src="assets/explode.mp3"></audio>
+<footer class="footer">© 2026 Eliasd. All Rights Reserved</footer>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
